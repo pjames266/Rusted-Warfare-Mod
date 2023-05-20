@@ -1,4 +1,4 @@
-# Rusted Warfare Mode
+# Rusted Warfare Mod - Beef Overhaul
 ## Mod Overview
 
 Overhaul mod for the steam game "Rusted Warfare". Designed to create new resource materials to focus on base infrastructure and planning as well as creating all new vehicles based on real world classes and performance.
