@@ -1,0 +1,8 @@
+[mod]
+title: A-tech Armoury
+description: Large unit addon mod, with over 70 new units, including overhauls and replacements for multiple vanilla units. 
+Units are rendered in a unique graphical style that i have worked hard to keep consistant, and there should be something for everyone in here.
+
+tags: units, 
+
+thumbnail: Thumbnail.png
