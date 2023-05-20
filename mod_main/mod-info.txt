@@ -1,0 +1,6 @@
+[mod]
+title: TOP-G TOP-G TOP-G TOP-G!
+
+description: FREE MY MAN!
+
+thumbnail: Capture.jpg
