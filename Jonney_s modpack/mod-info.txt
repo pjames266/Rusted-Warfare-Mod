@@ -1,0 +1,6 @@
+[mod]
+title: Jonney's Mod v1.16 (Real)
+
+description: More fun with a little more balancing!
+
+thumbnail: Capture.jpg
