@@ -1,0 +1,10 @@
+[mod]
+title: LegendsOfHighPeak 1.8.31
+description: The cold season is approaching and with it, those forsaken barbarians. Every year, they come down the hills to raid our supplies... Every year, we prepare for their coming. Every year, we are not ready...
+tags: units, infantry, weapon, fantasy, ancient, monsters, total conversion, highpeak
+
+thumbnail: mod-thumbnail.png
+
+[music]
+sourceFolder: data/music/
+whenUsingUnitsFromThisMod_playExclusively: true

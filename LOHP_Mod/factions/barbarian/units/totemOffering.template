@@ -1,0 +1,87 @@
+[action_sellTrophy]
+spawnEffectsOnQueue:CUSTOM:sellTrophy
+isVisible: if (numberOfUnitsInTeam(withTag='canSellTrophy', withinRange=110, greaterThan=0) or self.numberOfUnitsInAllyNotOwnTeam(withTag='canSellTrophy', withinRange=110, greaterThan=0)) or self.isControlledByAI()
+ai_isDisabled:true
+iconImage:ROOT:\data\images\money.png
+iconExtraImage:ROOT:\data\images\money.png
+addResources: Emerald=150
+displayType: upgrade
+price:  trophy=1
+text: Sell trophy
+description:-Sell your trophy for emeralds\n -Get 150 emeralds
+buildSpeed: 0s
+pos:1
+[effect_sellTrophy]
+alsoPlaySound:ROOT:\data\soundFx\gazul.ogg:0.4
+
+[action_wolf]
+spawnEffectsOnQueue:CUSTOM:wolfHowl
+isVisible: if (numberOfUnitsInTeam(withTag='hunterTotem', withinRange=110, greaterThan=0) or self.numberOfUnitsInAllyNotOwnTeam(withTag='hunterTotem', withinRange=110, greaterThan=0)) or self.isControlledByAI()
+isLocked: if self.isControlledByAI() and self.tags(includes='elite')
+isLockedAlt: if self.isControlledByAI() and self.kills(lessThan=4) 
+unitShownInUI:lohpBarbarianInfantry_4
+convertTo:lohpBarbarianInfantry_4
+addResources: hp=1000
+displayType: upgrade
+price:  trophy=1, Gazul=100
+text: Honor the wolf spirit
+description:-Use your trophy to honor this spirit\n -Be reborn as an animal warrior
+buildSpeed: 0s
+pos:1
+[effect_wolfHowl]
+alsoEmitEffects:shockwave
+alsoPlaySound:ROOT:\data\soundFx\wolfHowl.ogg:0.25
+
+[action_eagle]
+spawnEffectsOnQueue:CUSTOM:eagleHowl
+isVisible: if (numberOfUnitsInTeam(withTag='hunterTotem', withinRange=110, greaterThan=0) or self.numberOfUnitsInAllyNotOwnTeam(withTag='hunterTotem', withinRange=110, greaterThan=0)) or self.isControlledByAI()
+isLocked: if self.isControlledByAI() and self.tags(includes='elite')
+isLockedAlt: if self.isControlledByAI() and self.kills(lessThan=4) 
+unitShownInUI:lohpBarbarianInfantry_2
+convertTo:lohpBarbarianInfantry_2_ready
+addResources: hp=1000
+displayType: upgrade
+price:  trophy=1, Gazul=220
+text: Honor the eagle spirit
+description:-Use your trophy to honor this spirit\n -Be reborn as an animal warrior
+buildSpeed: 0s
+pos:1
+[effect_eagleHowl]
+alsoEmitEffects:shockwave
+alsoPlaySound:ROOT:\data\soundFx\deathGriffin.ogg:0.25
+
+[action_bear]
+spawnEffectsOnQueue:CUSTOM:bearHowl
+isVisible: if (numberOfUnitsInTeam(withTag='guardianTotem', withinRange=110, greaterThan=0) or self.numberOfUnitsInAllyNotOwnTeam(withTag='guardianTotem', withinRange=110, greaterThan=0)) or self.isControlledByAI()
+isLocked: if self.isControlledByAI() and self.tags(includes='elite')
+isLockedAlt: if self.isControlledByAI() and self.kills(lessThan=4) 
+unitShownInUI:lohpBarbarianInfantry_3
+convertTo:lohpBarbarianInfantry_3
+addResources: hp=1000
+displayType: upgrade
+price:  trophy=1, Gazul=400
+text: Honor the bear spirit
+description:-Use your trophy to honor this spirit\n -Be reborn as an animal warrior
+buildSpeed: 0s
+pos:1
+[effect_bearHowl]
+alsoEmitEffects:shockwave
+alsoPlaySound:ROOT:\data\soundFx\bearHowl.ogg:0.25
+
+[action_stag]
+spawnEffectsOnQueue:CUSTOM:stagHowl
+isVisible:  if (numberOfUnitsInTeam(withTag='guardianTotem', withinRange=110, greaterThan=0) or self.numberOfUnitsInAllyNotOwnTeam(withTag='guardianTotem', withinRange=110, greaterThan=0)) or self.isControlledByAI()
+isLocked: if self.isControlledByAI() and self.tags(includes='elite')
+isLockedAlt: if self.isControlledByAI() and self.kills(lessThan=4) 
+unitShownInUI:lohpBarbarianArcher_2
+convertTo:lohpBarbarianArcher_2
+addResources: hp=1000
+displayType: upgrade
+price:  trophy=1, Gazul=120
+text: Honor the stag spirit
+description:-Use your trophy to honor this spirit\n -Be reborn as an animal warrior
+buildSpeed: 0s
+pos:1
+[effect_stagHowl]
+alsoEmitEffects:shockwave
+alsoPlaySound:ROOT:\data\soundFx\stagHowl.ogg:0.25

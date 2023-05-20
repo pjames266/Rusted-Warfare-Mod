@@ -1,0 +1,23 @@
+[effect_marker]
+alwayStartDirAtZero:true
+
+fadeInTime:10
+dirOffsetRandom:360
+xOffsetRelativeRandom:14
+yOffsetRelativeRandom:14
+attachedToUnit: true
+life: 80
+alpha: 0.6
+scaleFrom:0.7
+scaleTo: 3
+hSpeed: 0
+xSpeedRelativeRandom:0.14
+ySpeedRelativeRandom:0.14
+image: ROOT:\data\images\dust.png
+priority: high
+drawUnderUnits:false
+
+[graphics]
+repairEffect:NONE
+repairEffectAtTarget:CUSTOM:marker*3
+repairEffectRate:10

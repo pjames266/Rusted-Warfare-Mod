@@ -1,0 +1,17 @@
+[mod]
+title: major explosions (超级爆炸)
+description: Added magnificent nuke and conventional explosions. They are made for my main mod major experimentals: https://steamcommunity.com/sharedfiles/filedetails/?id=2585122844 . You can find them in the air unit tab in sandbox mode. If you are a modder, feel free to reuse the art assets of this mod, or summon the explosions directly with "spawn unit" keys. I paid an artist to make the explosion animations for the rusted warfare community, please do not use them to create other games that earn you profits.type: addon
+description_zh: 这个模组增加了超棒的核弹和大型常规爆炸特效， 它们是为了我的更多实验单位模组制作的： https://steamcommunity.com/sharedfiles/filedetails/?id=2585122844 。你可以在沙盒模式的空中单位页面找到它们。你也可以在自己的模组中使用这个模组的任意素材与代码。这个模组的爆炸动画是我花钱约稿得到的，请不要用于商业用途。
+contributions: Art assets made by this artist: https://www.mihuashi.com/profiles/4348 Code made by myself (Rystiya).
+
+minVersion: v1.15
+tags: Units
+thumbnail: major-explosions.png
+
+Link (future updates will still use this link):
+https://drive.google.com/file/d/16KvecREBM7uuHWeJuDsyGFPQzOxL-tO6/view?usp=sharing
+
+Discord server: 
+https://discord.gg/aERkFxYYsS 
+
+QQ: 910529283

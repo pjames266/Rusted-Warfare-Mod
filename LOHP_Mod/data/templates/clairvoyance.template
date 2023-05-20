@@ -1,0 +1,63 @@
+[hiddenAction_hungerTimer]
+alsoTriggerAction:visionAuto
+
+[action_darknessVision]
+iconImage:ROOT:\data\images\supervision.png
+displayType:action
+pos:1
+text: Clairvoyance
+description: Passive\n -Reveal the fog in a large area every 30 seconds
+buildSpeed: 0s
+isVisible: true
+
+[hiddenAction_visionAuto]
+fireTurretXAtGround: special
+fireTurretXAtGround_withProjectile:vision
+fireTurretXAtGround_withOffset:-75,75
+spawnEffects:CUSTOM:vision
+alsoTriggerAction:visionAuto2,visionAuto3,visionAuto4
+
+[hiddenAction_visionAuto2]
+fireTurretXAtGround: special
+fireTurretXAtGround_withProjectile:vision
+fireTurretXAtGround_withOffset:75,75
+[hiddenAction_visionAuto3]
+fireTurretXAtGround: special
+fireTurretXAtGround_withProjectile:vision
+fireTurretXAtGround_withOffset:-75,-75
+[hiddenAction_visionAuto4]
+fireTurretXAtGround: special
+fireTurretXAtGround_withProjectile:vision
+fireTurretXAtGround_withOffset:75,-75
+
+[effect_vision]
+alpha: 0.1
+attachedToUnit: true
+life: 50
+scaleFrom:0
+scaleTo: 3
+image: ROOT:\data\images\clairvoyance.png
+priority: high
+drawUnderUnits:true
+dirOffsetRandom:360
+dirSpeed:5
+
+[turret_special]
+x: 0
+y: 0
+attachedTo:1
+size:0
+limitingRange:0
+canShoot:false
+invisible: true
+
+[projectile_vision]
+life: 300
+speed: 120
+drawSize: 0
+areaDamage: 0
+areaRadius:2000
+targetGround: true
+explodeOnEndOfLife: true
+shouldRevealFog:true
+explodeEffect:NONE

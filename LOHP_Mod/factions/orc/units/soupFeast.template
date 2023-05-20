@@ -1,0 +1,18 @@
+[action_soupFeast]
+spawnEffectsOnQueue:CUSTOM:orcHowl
+isVisible: if numberOfUnitsInTeam(withTag='soup', withinRange=75, greaterThan=0)
+unitShownInUI:lohpOrcInfantry_1T2
+textAddUnitName:lohpOrcInfantry_1T2
+descriptionAddFromUnit:lohpOrcInfantry_1T2
+descriptionAddUnitStats:lohpOrcInfantry_1T2
+convertTo:lohpOrcInfantry_1T2
+addResources: hp=1000
+displayType: upgrade
+price:  Soup=25, Gazul=100
+textAddUnitName:
+
+buildSpeed: 0s
+pos:1
+[effect_orcHowl]
+alsoEmitEffects:shockwave
+alsoPlaySound:ROOT:\data\soundFx\deathOrc.ogg:0.05, ROOT:\data\soundFx\deathOrc2.ogg:0.05, ROOT:\data\soundFx\deathOrc3.ogg:0.05
