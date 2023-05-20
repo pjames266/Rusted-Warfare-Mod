@@ -1,0 +1,65 @@
+[core]
+strictLevel: 1
+logIfCreditResourceUsed:true
+#----------------------------------(globalResources)---------------------------------------------
+
+[global_resource_Food]
+#global resource, shared with all units on team
+displayName: Food
+displayColor:#f5e6b4
+displayRoundedDown:true
+hidden:false
+
+[global_resource_Emerald]
+#global resource, shared with all units on team
+displayName: Emerald
+displayColor:#00d546
+displayRoundedDown:true
+hidden:false
+
+[global_resource_Gazul]
+#global resource, shared with all units on team
+displayName: Gazul
+displayColor:#00d5d2
+displayRoundedDown:true
+hidden:false
+
+[global_resource_Dead]
+#global resource, shared with all units on team
+displayName: Dead
+displayRoundedDown:true
+hidden:true
+
+[global_resource_soup]
+#global resource, shared with all units on team
+displayName: Soup
+displayColor:#cde755
+displayRoundedDown:true
+hidden:false
+
+[global_resource_xp]
+#global resource, shared with all units on team
+displayName: XP
+displayRoundedDown:true
+hidden:true
+
+#----------------------------------(localResources)---------------------------------------------
+
+[resource_localxp]
+displayName: XP
+
+[resource_raiseDeadOrc]
+displayName: Raise dead Orc
+displayRoundedDown:true
+hidden:true
+
+[resource_raiseDeadHaunting]
+displayName: Raise dead Haunting
+displayRoundedDown:true
+hidden:true
+
+[graphics]
+showTransportBar:false
+
+#----------------------------------(winter)---------------------------------------------
+

@@ -1,0 +1,32 @@
+[hiddenAction_unitXp]
+autoTriggerOnEvent: destroyed
+fireTurretXAtGround:1
+fireTurretXAtGround_withOffset:0,0
+fireTurretXAtGround_withProjectile:xp
+
+[projectile_xp]
+drawSize:0
+areaDamage: 0
+areaRadius:200
+areaDamageNoFalloff:true
+armourIgnoreAmount:1000
+life: 150
+speed:100
+explodeEffect:NONE
+mutatorXp_ifUnitWithTags:hero
+mutatorXp_addResourcesAreaHit:xp=${ core.maxHp * 0.075 }
+spawnProjectilesOnCreate:soup
+
+[projectile_soup]
+drawSize:0
+areaDamage: 0
+areaRadius:200
+areaDamageNoFalloff:true
+armourIgnoreAmount:1000
+life: 150
+speed:100
+explodeEffect:NONE
+friendlyFire:true
+
+mutatorSoupCollector_ifUnitWithTags:soupCollector
+mutatorSoupCollector_addResourcesAreaHit:soup=${ core.maxHp * 0.05 }

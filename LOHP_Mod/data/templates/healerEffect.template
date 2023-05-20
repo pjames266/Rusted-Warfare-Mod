@@ -1,0 +1,20 @@
+[effect_marker]
+alwayStartDirAtZero:true
+teamColorRatio:1
+fadeInTime:20
+xOffsetRelativeRandom:5
+yOffsetRelativeRandom:5
+attachedToUnit: true
+life: 250
+alpha: 0.3
+scaleFrom:1
+scaleTo: 0.5
+hSpeed: 0.2
+image: ROOT:\data\images\marker.png
+priority: high
+drawUnderUnits:false
+
+[graphics]
+repairEffect:NONE
+repairEffectAtTarget:CUSTOM:marker
+repairEffectRate:25

@@ -1,0 +1,17 @@
+[hiddenAction_buildingXp]
+autoTriggerOnEvent: destroyed
+fireTurretXAtGround:1
+fireTurretXAtGround_withOffset:0,0
+fireTurretXAtGround_withProjectile:xp
+
+[projectile_xp]
+drawSize:0
+areaDamage: 0
+areaRadius:200
+areaDamageNoFalloff:true
+armourIgnoreAmount:1000
+life: 150
+speed:100
+explodeEffect:NONE
+mutatorX_ifUnitWithTags:hero
+mutatorX_addResourcesAreaHit:xp=${ core.maxHp * 0.01 }

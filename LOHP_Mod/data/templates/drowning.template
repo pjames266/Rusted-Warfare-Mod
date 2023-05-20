@@ -1,0 +1,3 @@
+[hiddenAction_drowning]
+autoTrigger: if self.isAtGroundHeight() and self.isOverLiquid() and not self.hasParent()
+deleteSelf:true

@@ -1,0 +1,173 @@
+#----------------------------------(items)---------------------------------------------
+#------------------(inventory)-
+
+[resource_localInventorySlot]
+displayName: Free slot
+
+[hiddenAction_InfantrylocalInventorySlot]
+autoTriggerOnEvent: created
+addResources: localInventorySlot=1
+
+[action_infoInventory]
+displayRemainingStockpile: true
+isVisible: if (self.resource(type='localInventorySlot', greaterThan=0) and numberOfUnitsInTeam(withTag='sellItems', greaterThan=0)) or (self.resource(type='localInventorySlot', greaterThan=0) and self.numberOfUnitsInAllyNotOwnTeam(withTag='sellItems', greaterThan=0))
+iconImage:ROOT:\data\images\inventorySlot.png
+displayType:action
+pos:9
+text: Inventory
+description: Free inventory slots
+addResources: localInventorySlot=1
+price:  localInventorySlot=1
+buildSpeed: 0s
+
+[effect_buyItem]
+alsoPlaySound:ROOT:\data\soundFx\gazul.ogg:0.4
+life: 20
+
+[effect_useItem]
+alsoPlaySound:ROOT:\data\soundFx\dustFire.ogg:0.4
+life: 20
+
+#------------------(localGanjingaWard1)-
+
+[resource_localGanjingaWard1]
+displayName: item
+
+[action_buyGanjingaWard1]
+isVisible: if (self.resource(type='localInventorySlot', greaterThan=0) and numberOfUnitsInTeam(withinRange=100, withTag='sellItems', greaterThan=0)) or (self.resource(type='localInventorySlot', greaterThan=0) and self.numberOfUnitsInAllyNotOwnTeam(withinRange=100, withTag='sellItems', greaterThan=0))
+iconImage:ROOT:\data\images\buy.png
+displayType:action
+pos:7
+text: Buy
+textAddUnitName: lohpGanjingaWard_1
+descriptionAddFromUnit: lohpGanjingaWard_1
+addResources: localGanjingaWard1=1
+price:  Emerald=100, localInventorySlot=1
+onlyOneUnitAtATime:true
+buildSpeed: 0s
+allowMultipleInQueue:false
+spawnEffectsOnQueue:CUSTOM:buyItem
+
+[action_useGanjingaWard1]
+displayRemainingStockpile: true
+isVisible: if (self.resource(type='localGanjingaWard1', greaterThan=0))
+iconImage:ROOT:\data\images\item.png
+displayType:action
+pos:8
+text: Use
+textAddUnitName: lohpGanjingaWard_1
+descriptionAddFromUnit: lohpGanjingaWard_1
+addResources: localInventorySlot=1
+price: localGanjingaWard1=1
+onlyOneUnitAtATime:true
+buildSpeed: 0s
+allowMultipleInQueue:false
+spawnUnits: lohpGanjingaWard_1
+spawnEffectsOnQueue:CUSTOM:useItem
+alsoTriggerAction:passiveGanjingaWard1Off
+
+[hiddenAction_passiveGanjingaWard1On]
+autoTrigger:if (self.resource(type='localGanjingaWard1', greaterThan=0) and not self.tags(includes='passiveGanjingaWard1On'))
+temporarilyAddTags: passiveGanjingaWard1On
+setUnitStats: moveSpeed+=0.1
+
+[hiddenAction_passiveGanjingaWard1Off]
+requireConditional:if (self.resource(type='localGanjingaWard1', lessThan=1))
+temporarilyRemoveTags: passiveGanjingaWard1On
+setUnitStats: moveSpeed-=0.1
+
+#------------------(localGanjingaWard2)-
+
+[resource_localGanjingaWard2]
+displayName: item
+
+[action_buyGanjingaWard2]
+isVisible: if (self.resource(type='localInventorySlot', greaterThan=0) and numberOfUnitsInTeam(withinRange=100, withTag='sellItems', greaterThan=0)) or (self.resource(type='localInventorySlot', greaterThan=0) and self.numberOfUnitsInAllyNotOwnTeam(withinRange=100, withTag='sellItems', greaterThan=0))
+iconImage:ROOT:\data\images\buy.png
+displayType:action
+pos:7
+text: Buy
+textAddUnitName: lohpGanjingaWard_2
+descriptionAddFromUnit: lohpGanjingaWard_2
+addResources: localGanjingaWard2=1
+price:  Emerald=100, localInventorySlot=1
+onlyOneUnitAtATime:true
+buildSpeed: 0s
+allowMultipleInQueue:false
+spawnEffectsOnQueue:CUSTOM:buyItem
+
+[action_useGanjingaWard2]
+displayRemainingStockpile: true
+isVisible: if (self.resource(type='localGanjingaWard2', greaterThan=0))
+iconImage:ROOT:\data\images\item.png
+displayType:action
+pos:8
+text: Use
+textAddUnitName: lohpGanjingaWard_2
+descriptionAddFromUnit: lohpGanjingaWard_2
+addResources: localInventorySlot=1
+price: localGanjingaWard2=1
+onlyOneUnitAtATime:true
+buildSpeed: 0s
+allowMultipleInQueue:false
+spawnUnits: lohpGanjingaWard_2
+spawnEffectsOnQueue:CUSTOM:useItem
+alsoTriggerAction:passiveGanjingaWard2Off
+
+[hiddenAction_passiveGanjingaWard2On]
+autoTrigger:if (self.resource(type='localGanjingaWard2', greaterThan=0) and not self.tags(includes='passiveGanjingaWard2On'))
+temporarilyAddTags: passiveGanjingaWard2On
+setUnitStats: maxHp+=15
+
+[hiddenAction_passiveGanjingaWard2Off]
+requireConditional:if (self.resource(type='localGanjingaWard2', lessThan=2))
+temporarilyRemoveTags: passiveGanjingaWard2On
+setUnitStats: maxHp-=15
+
+#------------------(localGanjingaWard3)-
+
+[resource_localGanjingaWard3]
+displayName: item
+
+[action_buyGanjingaWard3]
+isVisible: if (self.resource(type='localInventorySlot', greaterThan=0) and numberOfUnitsInTeam(withinRange=100, withTag='sellItems', greaterThan=0)) or (self.resource(type='localInventorySlot', greaterThan=0) and self.numberOfUnitsInAllyNotOwnTeam(withinRange=100, withTag='sellItems', greaterThan=0))
+iconImage:ROOT:\data\images\buy.png
+displayType:action
+pos:7
+text: Buy
+textAddUnitName: lohpGanjingaWard_3
+descriptionAddFromUnit: lohpGanjingaWard_3
+addResources: localGanjingaWard3=1
+price:  Emerald=50, localInventorySlot=1
+onlyOneUnitAtATime:true
+buildSpeed: 0s
+allowMultipleInQueue:false
+spawnEffectsOnQueue:CUSTOM:buyItem
+
+[action_useGanjingaWard3]
+displayRemainingStockpile: true
+isVisible: if (self.resource(type='localGanjingaWard3', greaterThan=0))
+iconImage:ROOT:\data\images\item.png
+displayType:action
+pos:8
+text: Use
+textAddUnitName: lohpGanjingaWard_3
+descriptionAddFromUnit: lohpGanjingaWard_3
+addResources: localInventorySlot=1
+price: localGanjingaWard3=1
+onlyOneUnitAtATime:true
+buildSpeed: 0s
+allowMultipleInQueue:false
+spawnUnits: lohpGanjingaWard_3
+spawnEffectsOnQueue:CUSTOM:useItem
+alsoTriggerAction:passiveGanjingaWard3Off
+
+[hiddenAction_passiveGanjingaWard3On]
+autoTrigger:if (self.resource(type='localGanjingaWard3', greaterThan=0) and not self.tags(includes='passiveGanjingaWard3On'))
+temporarilyAddTags: passiveGanjingaWard3On
+setUnitStats: fogOfWarSightRange+=5
+
+[hiddenAction_passiveGanjingaWard3Off]
+requireConditional:if (self.resource(type='localGanjingaWard3', lessThan=1))
+temporarilyRemoveTags: passiveGanjingaWard3On
+setUnitStats: fogOfWarSightRange-=5

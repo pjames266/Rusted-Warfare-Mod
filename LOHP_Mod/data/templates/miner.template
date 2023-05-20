@@ -1,0 +1,44 @@
+[core]
+canReclaimResources: true
+nanoRangeForReclaim:5
+nanoRangeForReclaimIsMelee:true
+canReclaimResourcesOnlyWithTags:EmeraldResource
+canReclaimResourcesNextSearchRange:10000
+
+[effect_mine]
+
+alwayStartDirAtZero:true
+attachedToUnit: true
+life: 100
+alpha: 0
+#physics: true
+hSpeed: 0.2
+priority: high
+drawUnderUnits:false
+showInFog:false
+alsoPlaySound:ROOT:\data\soundFx\emeraldHit.ogg:0.06, ROOT:\data\soundFx\pickaxeHit.ogg:0.06, ROOT:\data\soundFx\emeraldHit2.ogg:0.06, ROOT:\data\soundFx\pickaxeHit2.ogg:0.06
+
+[hiddenAction_aiBoost]
+autoTrigger: if self.resource(type='Emerald',lessThan=2000)
+requireConditional: if self.isControlledByAI()
+addResources: Emerald=1
+
+[graphics]
+
+repairEffectRate:50
+reclaimEffect: CUSTOM:mine
+reclaimEffectRate:50
+
+[ai]
+
+whenUsingAsHarvester_recommendedInEachBase: 6
+useAsHarvester:true
+
+
+[animation_harvest]
+onActions : reclaim
+
+body_0s: {frame:2}
+body_0.1s: {frame:2}
+body_0.5s: {frame:4} 
+body_0.8s: {frame:4}

@@ -1,0 +1,23 @@
+[action_countFood]
+isGuiBlinking:if numberOfUnitsInTeam(withTag='farm', withinRange=85, greaterThan=0) or self.numberOfUnitsInAllyNotOwnTeam(withTag='farm', withinRange=85, greaterThan=0)
+addResources: localFood=1
+price:  localFood=1
+text: Food: 
+description: -Rations available\n -Feed 4 units\n -Can restock at nearby friendly farms
+displayType: infoOnly
+buildSpeed: 0s
+pos: 0
+displayRemainingStockpile: true
+isActive:false
+
+[hiddenAction_gatherLocalFood]
+autoTrigger: if numberOfUnitsInTeam(withTag='farm', withinRange=85, greaterThan=0) or self.numberOfUnitsInAllyNotOwnTeam(withTag='farm', withinRange=85, greaterThan=0)
+requireConditional: if self.resource(type='localFood',lessThan=100)
+addResources: localFood=1
+
+[hiddenAction_hungerTimer]
+alsoTriggerAction: useLocalFood
+
+[hiddenAction_useLocalFood]
+requireConditional: if self.resource(type='Food',lessThan=100) and self.resource(type='localFood',greaterThan=0)
+addResources: Food=5, localFood=-5

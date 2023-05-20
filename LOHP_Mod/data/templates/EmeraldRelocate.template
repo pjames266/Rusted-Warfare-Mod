@@ -1,0 +1,33 @@
+[action_faeRelocate]
+price: hp=2500
+whenBuilding_playAnimation:birth
+spawnEffects:CUSTOM:auraBirth
+isVisible: if self.globalTeamTags(includes='factionFae')
+iconImage: fae.png
+iconExtraImage:fae.png
+text: Relocate
+description: -Relocate the great emerald anywhere on the map \n -The relocation area must be buildable\n -Damages the great emerald
+buildSpeed: 15s
+highPriorityQueue: true
+fireTurretXAtGround:relocate
+fireTurretXAtGround_onlyOverPassableTileOf:BUILDING
+
+[turret_relocate]
+x: 0
+y: 0
+canShoot: false
+invisible: true
+size:0
+limitingRange:9999
+projectile:relocate
+
+[projectile_relocate]
+directDamage:0
+life: 900
+speed: 99
+teleportSource:true
+drawSize: 0
+hitSound: false
+targetGround:true
+largeHitEffect: false
+explodeEffect: NONE

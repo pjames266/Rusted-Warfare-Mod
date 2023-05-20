@@ -1,0 +1,139 @@
+[action_redwood]
+whenBuilding_playAnimation:birth
+spawnEffects:CUSTOM:auraBirth
+isVisible: if numberOfUnitsInTeam(withTag='lohpRecordTrackingAndSpawner', lessThan=1)and numberOfUnitsInNeutralTeam(withTag='lohpRedwood', greaterThan=0)
+isLocked: if self.queueSize(greaterThan=0)
+iconImage: ROOT:\data\images\addon.png
+iconExtraImage: ROOT:\data\images\addon.png
+spawnUnits: lohpRedwoodBuilder_1(offsetX=-8, offsetY=35), lohpRedwoodBuilder_1(offsetX=8, offsetY=35),lohpRedwoodHero(offsetX=0, offsetY=25), lohpRedwoodBuilder_1(offsetX=-35, offsetY=0), lohpRedwoodBuilder_1(offsetX=35, offsetY=0), lohpRecordTrackingAndSpawner
+addResourcesScaledByAIHandicaps: Emerald=1300, Gazul=150, Food=50
+text: Redwood
+description: (NEUTRAL) \n -Swarm faction \n -Stealthy infantry, strong beasts and hidden buildings\n -Very mobile\n -Magical units are fragile but regenerate faster when food is available\n -Ancient oaks drop magic acorns that heal units\n -Uses magical illusions and tricks\n -----""Iconic unit""-----\nMaster bear
+buildSpeed: 6s
+highPriorityQueue: true
+ai_isHighPriority:true
+addGlobalTeamTags: factionRedwood, good, evil, neutral
+temporarilyAddTags: good, evil, factionFae, factionRedwood
+
+[canBuild_heroRedwood]
+name: lohpRedwoodHero
+isVisible:if self.globalTeamTags(includes='factionRedwood')
+isLocked: if numberOfUnitsInTeam(withTag='hero', greaterThan=0, factoryQueue=true)
+isLockedMessage:Your explorer is alive
+pos:2
+
+[action_foreignLegion]
+whenBuilding_playAnimation:birth
+spawnEffects:CUSTOM:auraBirth
+isVisible: if numberOfUnitsInTeam(withTag='lohpRecordTrackingAndSpawner', lessThan=1)and numberOfUnitsInNeutralTeam(withTag='lohpTheForeignLegion', greaterThan=0)
+isLocked: if self.queueSize(greaterThan=0)
+iconImage: ROOT:\data\images\addon.png
+iconExtraImage: ROOT:\data\images\addon.png
+spawnUnits: lohpForeignLegionBuilder_1(offsetX=-8, offsetY=35), lohpForeignLegionBuilder_1(offsetX=8, offsetY=35),lohpForeignLegionHero(offsetX=0, offsetY=25), lohpForeignLegionBuilder_1(offsetX=-35, offsetY=0), lohpForeignLegionBuilder_1(offsetX=35, offsetY=0), lohpRecordTrackingAndSpawner
+addResourcesScaledByAIHandicaps: Emerald=1300, Gazul=150, Food=50
+text: ForeignLegion
+description: (EVIL) \n -Defensive faction \n -Reliable infantry\n -Good selection of machines and support units\n -Requisition is used to request reinforcements from Dvar \n -----""Iconic unit""-----\nHidden testudo
+buildSpeed: 6s
+highPriorityQueue: true
+ai_isHighPriority:true
+addGlobalTeamTags: factionForeignLegion, evil
+temporarilyAddTags: evil, factionForeignLegion, factionDvarik
+
+[canBuild_heroForeignLegion]
+name: lohpForeignLegionHero
+isVisible:if self.globalTeamTags(includes='factionForeignLegion')
+isLocked: if numberOfUnitsInTeam(withTag='hero', greaterThan=0, factoryQueue=true)
+isLockedMessage:Your explorer is alive
+pos:2
+
+
+[action_goblin]
+whenBuilding_playAnimation:birth
+spawnEffects:CUSTOM:auraBirthDestroyed, shockwave, CUSTOM:deathExplode*100, CUSTOM:crash
+isVisible: if numberOfUnitsInTeam(withTag='lohpRecordTrackingAndSpawner', lessThan=1)and numberOfUnitsInNeutralTeam(withTag='lohpTheGoblins', greaterThan=0)
+isLocked: if self.queueSize(greaterThan=0)
+iconImage: ROOT:\data\images\addon.png
+iconExtraImage: ROOT:\data\images\addon.png
+convertTo:lohpGoblinCrashedShip
+spawnUnits: lohpGoblinBuilder_1(offsetX=-8, offsetY=35), lohpGoblinBuilder_1(offsetX=8, offsetY=35), lohpGoblinHero(offsetX=0, offsetY=25), lohpGoblinBuilder_1(offsetX=-35, offsetY=0), lohpGoblinBuilder_1(offsetX=35, offsetY=0), lohpRecordTrackingAndSpawner
+addResourcesScaledByAIHandicaps: Emerald=1300, Gazoo=150, Food=50
+text: Goblins
+description: (Neutral) \n -Offensive faction \n -Selection of unconventional units \n -Most units are fragile but efficient\n -Builders are free\n -Can repair their crashed spaceship\n -----""Iconic unit""-----\nGaztrooyer
+buildSpeed: 6s
+highPriorityQueue: true
+ai_isHighPriority:true
+addGlobalTeamTags: factionGoblin, good, evil, neutral
+temporarilyAddTags: good, evil, factionGoblin
+
+[canBuild_heroGoblin]
+name: lohpGoblinHero
+isVisible:if self.globalTeamTags(includes='factionGoblin')
+isLocked: if numberOfUnitsInTeam(withTag='hero', greaterThan=0, factoryQueue=true)
+isLockedMessage:Your explorer is alive
+pos:2
+
+[effect_crash]
+fadeOut:false
+fadeInTime:10
+priority: critical
+alpha: 1
+attachedToUnit: true
+life: 10
+scaleFrom:1
+scaleTo: 1
+image: ROOT:\data\images\spaceShip.png
+drawUnderUnits:false
+xOffsetAbsolute:75
+yOffsetAbsolute:-75
+xSpeedRelative:-7
+ySpeedRelative:-7
+dirOffset:230
+dirSpeed:-1
+
+[action_haunting]
+whenBuilding_playAnimation:birth
+spawnEffects:CUSTOM:auraBirth
+isVisible: if numberOfUnitsInTeam(withTag='lohpRecordTrackingAndSpawner', lessThan=1)and numberOfUnitsInNeutralTeam(withTag='lohpHauntedWaters', greaterThan=0)
+isLocked: if self.queueSize(greaterThan=0)
+iconImage: ROOT:\data\images\addon.png
+iconExtraImage: ROOT:\data\images\addon.png
+spawnUnits: lohpHauntingBuilder_1(offsetX=-8, offsetY=35), lohpHauntingBuilder_1(offsetX=8, offsetY=35),lohpHauntingHero(offsetX=0, offsetY=25), lohpHauntingBuilder_1(offsetX=-35, offsetY=0), lohpHauntingBuilder_1(offsetX=35, offsetY=0), lohpRecordTrackingAndSpawner
+addResourcesScaledByAIHandicaps: Emerald=1300, Gazul=150
+text: Haunting
+description: (BEYOND GOOD AND EVIL) \n -Creeping faction \n -Etheral units are very though to kill but crumble if not anchored\n -Lodestones regenerate nearby etheral units and resurrects the deads\n -Cemeteries provide spirits over time\n -Units use no food (WARNING: Mercenaries will starve out!)\n -----""Iconic unit""-----\nLiving lodestone
+buildSpeed: 6s
+highPriorityQueue: true
+ai_isHighPriority:true
+addGlobalTeamTags: factionHaunting, evil
+temporarilyAddTags: evil, factionHaunting, lodestone
+
+[canBuild_heroHaunting]
+name: lohpHauntingHero
+isVisible:if self.globalTeamTags(includes='factionHaunting')
+isLocked: if numberOfUnitsInTeam(withTag='hero', greaterThan=0, factoryQueue=true)
+isLockedMessage:Your explorer is alive
+pos:2
+
+[action_ganjinga]
+whenBuilding_playAnimation:birth
+spawnEffects:CUSTOM:auraBirth
+isVisible: if numberOfUnitsInTeam(withTag='lohpRecordTrackingAndSpawner', lessThan=1)and numberOfUnitsInNeutralTeam(withTag='lohpHauntedWaters', greaterThan=0)
+isLocked: if self.queueSize(greaterThan=0)
+iconImage: ROOT:\data\images\addon.png
+iconExtraImage: ROOT:\data\images\addon.png
+spawnUnits: lohpGanjingaBuilder_1(offsetX=-8, offsetY=35), lohpGanjingaBuilder_1(offsetX=8, offsetY=35),lohpGanjingaHero(offsetX=0, offsetY=25), lohpGanjingaBuilder_1(offsetX=-35, offsetY=0), lohpGanjingaBuilder_1(offsetX=35, offsetY=0), lohpRecordTrackingAndSpawner
+addResourcesScaledByAIHandicaps: Emerald=1300, Gazul=150, Food=50
+text: Ganjinga
+description: (NEUTRAL) \n -Support faction \n -Fragile but lethal infantry\n -Mobile and most units can swim\n -Jujuus can be equipped by most infantry and offer passive and active utilities\n -Vodaas can carry multiple jujuus and destroy corpses\n -Baad mojos curses nearby enemies and repel undeads\n -----""Iconic unit""-----\nVodaa
+buildSpeed: 6s
+highPriorityQueue: true
+ai_isHighPriority:true
+addGlobalTeamTags: factionGanjinga, good, evil, neutral
+temporarilyAddTags: good, evil, factionFae, factionGanjinga
+
+[canBuild_heroGanjinga]
+name: lohpGanjingaHero
+isVisible:if self.globalTeamTags(includes='factionGanjinga')
+isLocked: if numberOfUnitsInTeam(withTag='hero', greaterThan=0, factoryQueue=true)
+isLockedMessage:Your explorer is alive
+pos:2
