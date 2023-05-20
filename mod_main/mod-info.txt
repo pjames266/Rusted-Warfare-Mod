@@ -1,6 +1,6 @@
 [mod]
-title: TOP-G TOP-G TOP-G TOP-G!
+title: Beef Overhaul 1.0
 
-description: FREE MY MAN!
+description: Cook that BEEF!
 
 thumbnail: Capture.jpg
