@@ -1,0 +1,45 @@
+[core]
+strictLevel: 1
+logIfCreditResourceUsed:true
+#----------------------------------(globalResources)---------------------------------------------
+
+[global_resource_Oil]
+#global resource, shared with all units on team
+displayName: Oil
+displayColor:#000000
+displayRoundedDown:true
+hidden:false
+
+[global_resource_Steel]
+#global resource, shared with all units on team
+displayName: Steel
+displayColor:#838784
+displayRoundedDown:true
+hidden:false
+
+[global_resource_Aluminum]
+#global resource, shared with all units on team
+displayName: Aluminum
+displayColor:#ffffff
+displayRoundedDown:true
+hidden:false
+
+[global_resource_Electricity]
+#global resource, shared with all units on team
+displayName: Electricity
+displayColor:#ebeb38
+displayRoundedDown:true
+hidden:true
+
+[global_resource_Uranium]
+#global resource, shared with all units on team
+displayName: Uranium
+displayColor:#3ad91e
+displayRoundedDown:true
+hidden:false
+
+
+#----------------------------------(localResources)---------------------------------------------
+
+
+
